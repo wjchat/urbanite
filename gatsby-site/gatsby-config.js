@@ -17,6 +17,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        module.exports = {
+          pathPrefix: "/reponame",
+        },
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
