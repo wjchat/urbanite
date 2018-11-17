@@ -36,7 +36,7 @@ class DancePortal extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            entered: true,
+            entered: false,
             wrongPW: false,
         }
     }
@@ -46,6 +46,7 @@ class DancePortal extends React.Component{
                 entered: true,
                 wrongPW: false,
             });
+            window.scrollTo(0, 0);
         }else{
             this.setState({
                 wrongPW: true,
