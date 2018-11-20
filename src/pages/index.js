@@ -33,8 +33,8 @@ class TicketsView extends React.Component{
     }
     move = (e) =>{ 
         TweenMax.to(this.refs.animate, this.duration,{
-            x: ((e.pageX - this.rect.left) - (this.refs.animate.clientWidth / 2)) / 10,
-            y: ((e.pageY - this.rect.top) - (this.refs.animate.clientHeight)) / 10,
+            x: ((e.pageX - this.rect.left) - (this.refs.animate.clientWidth / 2)) / 25,
+            y: ((e.pageY - this.rect.top) - (this.refs.animate.clientHeight)) / 25,
             ease: 'ease-in-out',
         })
     }

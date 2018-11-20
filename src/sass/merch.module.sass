@@ -4,8 +4,7 @@
     width: 95%
     display: flex
     box-sizing: border-box
-    justify-content: space-around
-            
+    justify-content: space-around 
 .item
     width: auto
     height: auto
@@ -17,7 +16,21 @@
     transition: .15s linear all 0s
     &:hover
         transform: scale(1.05)
-    
 .header
     text-align: center
     padding-top: 5%
+    
+@media (max-width: $mobileWidth)
+    .header
+        padding-top: 40%
+    .itemlist
+        display: block
+        margin: 0
+        padding: 0
+        justify-content: none
+        width: 100%
+        & > .item
+            max-width: none
+            width: 100%
+            padding: 100px
+    
