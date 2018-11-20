@@ -32,7 +32,6 @@ class TicketsView extends React.Component{
         })
     }
     move = (e) =>{ 
-        console.log(e.pageY - this.rect.top)
         TweenMax.to(this.refs.animate, this.duration,{
             x: ((e.pageX - this.rect.left) - (this.refs.animate.clientWidth / 2)) / 10,
             y: ((e.pageY - this.rect.top) - (this.refs.animate.clientHeight)) / 10,
@@ -85,7 +84,7 @@ class IndexPage extends React.Component{
                 <h1>Don't miss the <br/>
                 show of a lifetime.</h1>
             </div>
-            <h1 className = {styles.location}><orange>URBANA - CHAMPAIGN, IL <br/>
+            <h1 className = {styles.location}><orange>CHAMPAIGN - URBANA, IL <br/>
             THE CANOPY CLUB <br/>
             JANUARY 1ST, 2018 </orange></h1>
             <ParallaxBox

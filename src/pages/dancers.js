@@ -41,7 +41,7 @@ class DancePortal extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            entered: false,
+            entered: true,
             wrongPW: false,
         }
     }

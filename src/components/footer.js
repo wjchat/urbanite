@@ -4,7 +4,8 @@ export default class Footer extends React.Component{
     render(){
         return(
         <footer className = {styles.footer}>
-            URBANITE&copy;2018
+           <p>ROXWELL&copy;2018</p>
+            <p>SITE BY PRETTYBOY CREATIVE</p>    
         </footer>
         )
     }

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "HWGothicW";
+    src: url('../fonts/HighwayGothicWide.ttf') format("truetype");
+}@font-face {
+    font-family: "Helvetica Neue Condensed Black";
+    src: url('../fonts/HelveticaNeueCondensedBlack.ttf') format("truetype");
+}@font-face {
+    font-family: "Helvetica Neue Medium";
+    src: url('../fonts/HelveticaNeueMedium.ttf') format("truetype");
+}
+
 html {
 }
 body {
@@ -59,6 +70,7 @@ dfn {
 }
 h1 {
   margin: .67em 0;
+
 }
 mark {
   background-color: #ff0;
