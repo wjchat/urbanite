@@ -1,37 +1,50 @@
 import React from 'react'
+
 import { Link } from 'gatsby'
 import styles from "../sass/nav.module.sass"
 
-const NavLink = (props)=>(
-    <li style = {{
+class NavLink extends React.Component {
+    handleOver = () =>{
+        this.refs.animate.classList.add(styles.active); 
+    }
+    handleLeave = () =>{
+        this.refs.animate.classList.remove(styles.active);
+    }
+    render(){
+        return(
+        <li onMouseOver = {this.handleOver} onMouseLeave = {this.handleLeave} style = {{
         listStyle: 'none',
         }}>
-        <Link
-        style = {{
-                color: 'white',
-                textDecoration: 'none',
-                fontFamily: 'sans-serif',
-            }} 
-        to = {props.link}>{props.page}</Link>
-    </li>
-)
-const Nav = ()=> (
-    <ul className={styles.nav}
-       >
-        <NavLink 
-            link = '/'
-            page = 'Home' />     
-        <NavLink
-            link = '/'
-            page = 'Tickets' />   
-        <NavLink 
-            link = '/merch/'
-            page = 'Merch' />        
-        <NavLink 
-            link = '/dancers/'
-            page = 'Dancer Portal' />
-    </ul>
-)
+        <Link activeClassName = {styles.currentPage}
+                   className = {styles.link}
+            to = {this.props.link}>{this.props.page}</Link>
+            <div ref = 'animate' className = {styles.border}></div>
+        </li>
+        )
+    }
+}
+class Nav extends React.Component{
+    render(){
+        return(
+            <nav className={styles.nav}
+               >
+                <NavLink 
+                    link = '/'
+                    page = 'Home' />     
+                <NavLink
+                    link = '/ticket'
+                    page = 'Tickets' />   
+                <NavLink 
+                    link = '/merch/'
+                    page = 'Merch' />        
+                <NavLink 
+                    link = '/dancers/'
+                    page = 'Dancer Portal' />
+            </nav>
+        )
+    }
+}
+
 const Header = ({ siteTitle }) => (
   <div className = {styles.header}
   >

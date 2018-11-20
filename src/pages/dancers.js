@@ -1,15 +1,17 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import DancePage from '../components/dancepage'
 import DanceIntro from '../components/danceintro'
 import Layout from '../components/layout'
-import Shirt1 from '../images/shirt1.jpeg'
-import Shirt2 from '../images/shirt2.jpeg'
 import styles from '../sass/dancer.module.sass'
 
 
 
+const ErrorMSG = () =>(
+    <p className = {styles.error}>
+        Wrong password, homie.
+    </p>
+)
 class PreEnter extends React.Component{
     handleClick = () => {
         this.props.onClick(this.refs.password.value.toLowerCase());
@@ -21,16 +23,19 @@ class PreEnter extends React.Component{
                <div>
                 <input placeholder = 'ENTER PASSWORD' ref = 'password' type="text"/>
                 <br/>
-                <div onClick = {this.handleClick} type = 'default'>SUBMIT</div>
+                <div className = {styles.submit} onClick = {this.handleClick} type = 'default'>SUBMIT</div>
+                {this.props.pw && <ErrorMSG />}
                 </div>
             </div>
         )
     }
 }
-const ErrorMSG = () =>(
-    <p>
-        Wrong password :/
-    </p>
+const PreEnterContainer= (props) =>(
+    <div className = {styles.entercontainer}>
+        <PreEnter
+         pw = {props.pw}
+         onClick = {props.onClick} />
+    </div>
 )
 class DancePortal extends React.Component{
     constructor(props){
@@ -56,8 +61,9 @@ class DancePortal extends React.Component{
     render(){
         return(
         <div>
-            {!this.state.entered ? <PreEnter onClick = {this.handleClick} />:<DancePage /> }
-            {this.state.wrongPW && <ErrorMSG /> }
+            {!this.state.entered ? <PreEnterContainer 
+                            pw = {this.state.wrongPW}
+                          onClick = {this.handleClick} />:<DancePage /> }
         </div>
         )
     }

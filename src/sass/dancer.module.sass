@@ -1,11 +1,16 @@
 @import 'global'
+.entercontainer
+    overflow: hidden
+    position: absolute
+    width: 100%
+    left: 0%
+    height: calc(100% - 80px)
 .preenter
-    width: 116%
+    width: 100%
     position: relative
-    left: -8%
     & > div
         position: absolute
-        top: 50%
+        top: 30%
         width: 100%
         display: block
         margin: auto
@@ -16,19 +21,40 @@
             background-color: rgba(0,0,0,.8)
             border: solid $orange 1px
             color: $orange
-        & > div
-            cursor: pointer
-            color: $orange
-            padding: 2px
-            background-color: rgba(0,0,0,.8)
-            width: 140px
-            display: block
-            position: relative
-            margin: auto
-            top: 5px
+.submit
+    cursor: pointer
+    color: $orange
+    padding: 2px
+    background-color: rgba(0,0,0,.8)
+    width: 140px
+    display: block
+    position: relative
+    margin: auto
+    top: 5px
+.error
+    position: relative 
+    top: 0
+    z-index: 100
+    color: $orange
+    margin-top: 1%
+    background-color: rgba(0,0,0,.4)
+    display: inline-block
+    padding: 5px
 .fullpage
-    margin-bottom: 20%
-    margin-top: 10%
+    margin-bottom: 30%
+    margin-top: 2%
+    & h1
+        position: relative
+.pic1
+    position: absolute
+    width: 56%
+    right: $margin
+    top: 12%
+    z-index: -1
+.pic2
+    width: 60%
+    position: absolute
+    right: $margin
 .places
     list-style: none
     margin: 0
@@ -75,6 +101,7 @@
         margin: 5px 0 10px 0
 .plaintext
     width: 50%
+    position: relative
 .drink
     margin-top: 2%
     &>h2

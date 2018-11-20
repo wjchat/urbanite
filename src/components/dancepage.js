@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Pic1 from '../components/dancers_1'
+import Pic2 from '../components/dancers_2'
+import Parallax from '../components/parallax'
 import styles from '../sass/dancer.module.sass'
 import styles2 from '../sass/index.module.sass'
 import TechSchedule from '../components/techschedule'
@@ -77,9 +80,13 @@ export default class DancePage extends React.Component{
             <div className = {styles.fullpage}>
                 <h1>WELCOME TO <br/>
                 <orange>URBANITE XXI</orange></h1>
+                <Parallax 
+                className = {styles.pic1}
+                image = <Pic1 /> 
+                />
                 <p className = {styles.plaintext}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae soluta ullam ut, praesentium earum odit quasi rerum eveniet nulla voluptas, iure, delectus assumenda accusamus voluptate vero eum asperiores velit possimus.</p>
                 <p>Send registration information to Doug@Doug.com</p>
-                
+                <br/><br/><br/>
                 <h2>Places</h2>
                 <div className = {styles2.lineOne}></div>
                 <PlaceList />
@@ -89,6 +96,10 @@ export default class DancePage extends React.Component{
                 <h2>Extras</h2>
             <div className = {styles2.lineOne}></div>
             <br/>
+            <Parallax 
+                className = {styles.pic2}
+                image = <Pic2 /> 
+                />
             <h1>DANCER <orange>PRE - PARTY</orange></h1>
             <p className = {styles.plaintext}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid sint doloribus autem enim tempora quod at quis reprehenderit rem, commodi molestiae sed. Optio repellendus eius illum minus maxime rerum ullam!

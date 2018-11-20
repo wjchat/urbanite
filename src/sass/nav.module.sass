@@ -1,13 +1,13 @@
 @import 'global'
 
 .header
-    background: rgba(0,0,0,.4)    
     position: sticky
     top: 0
     width: 100%
     height: $navHeight
     padding: 0 $margin
     z-index: 100
+    background: black
 .nav
     width: 45%
     display: flex
@@ -22,3 +22,22 @@
     text-decoration: none
     position: relative
     top: 20px
+.link
+    position: relative
+    text-decoration: none
+    color: white
+.border
+    position: relative
+    z-index: 50
+    width: 0
+    height: 2px
+    background-color: white
+    transition: .2s ease all 0s
+.active
+    width: 100%
+    
+.currentPage + .border
+    width: 100% 
+    background-color: $orange
+    height: 5px
+    
