@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+
 import Layout from '../components/layout'
 import Shirt1 from '../images/shirt1.jpeg'
 import Shirt2 from '../images/shirt2.jpeg'
@@ -8,14 +10,14 @@ import styles from '../sass/merch.module.sass'
 class Item extends React.Component{
     render(){
         return(
-            <a className = {styles.item}
+            <OutboundLink className = {styles.item}
                href = {this.props.url}
                target= '__blank'
                ref = 'animate'>
                 <h3>{this.props.name}</h3>
                 <img src={this.props.img} alt={this.props.name}/>  
                 <h5>${this.props.price}</h5>
-            </a>
+            </OutboundLink>
         )
     }
 }
