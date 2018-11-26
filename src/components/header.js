@@ -50,13 +50,13 @@ const Header = ({ siteTitle }) => (
   >
     <div
     >
-      <h1>
+      <h2>
         <Link className = {styles.title}
           to="/"
         >
           {siteTitle}
         </Link>
-      </h1>
+      </h2>
       <Nav />
     </div>
   </div>

@@ -39,7 +39,6 @@ const Merch = () => (
   <Layout>
    <div className = {styles.header}>
     <h1>MERCHANDISE</h1>
-    <p>We got swag.</p>
    </div>
     <ItemList />
   </Layout>

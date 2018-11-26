@@ -86,20 +86,20 @@ export default class DancePage extends React.Component{
                 />
                 <p className = {styles.plaintext}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae soluta ullam ut, praesentium earum odit quasi rerum eveniet nulla voluptas, iure, delectus assumenda accusamus voluptate vero eum asperiores velit possimus.</p>
                 <p>Send registration information to Doug@Doug.com</p>
-                <h1 className = {styles.placeHeader}>Places</h1>
+                <h2 className = {styles.placeHeader}>Places</h2>
                 <div className = {styles2.lineOne}></div>
                 <PlaceList />
-                <h1>Times</h1>
+                <h2>Times</h2>
                 <div className = {styles2.lineOne}></div>
                 <Times />
-                <h1>Extras</h1>
+                <h2>Extras</h2>
             <div className = {styles2.lineOne}></div>
             <br/>
             <Parallax 
                 className = {styles.pic2}
                 image = <Pic2 /> 
                 />
-            <h2>DANCER <orange>PRE - PARTY</orange></h2>
+            <h1>DANCER <orange>PRE - PARTY</orange></h1>
             <p className = {styles.plaintext}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid sint doloribus autem enim tempora quod at quis reprehenderit rem, commodi molestiae sed. Optio repellendus eius illum minus maxime rerum ullam!
             </p>

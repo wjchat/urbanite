@@ -51,7 +51,6 @@ class TicketsView extends React.Component{
                         <Tickets />
                     </Link>
                 </div>
-                <div className = {styles.lineThree}></div>
             </div>
         )
     }
@@ -72,25 +71,26 @@ class IndexPage extends React.Component{
               className = {styles.imageTwo}
               image = <LandingTwo />
                />                
-            <h1 style = {{
+            <h2 style = {{
                       position: 'relative'
                   }}>The dopest 
                    <br/>
                    <orange>dance showcase</orange>
-                    <br/>in the midwest.</h1>
+                    <br/>in the midwest.</h2>
             <div className = {styles.lineOne}></div>
             <p className = {styles.textOne}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptas reprehenderit ullam illum excepturi sapiente quia maxime odio vel, nam sequi aliquid, ad deleniti, quisquam non saepe rem consequuntur enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis pariatur deserunt possimus, blanditiis? Ipsam, alias dolore repudiandae necessitatibus cum omnis ipsa dolorum, tempore minima asperiores iusto. Quas neque, quae.</p>
             <div className = {styles.lineTwo}>
-                <h1>Don't miss the <br/>
-                show of a lifetime.</h1>
+                <h2>Don't miss the <br/>
+                show of a lifetime.</h2>
             </div>
             <h1 className = {styles.location}><orange>CHAMPAIGN - URBANA, IL <br/>
             THE CANOPY CLUB <br/>
-            JANUARY 1ST, 2018 </orange></h1>
+            DECEMBER 1ST, 2018 </orange></h1>
             <ParallaxBox
                 className = {styles.imageThree}
                 image = <TicketsView />
                 />
+            <div className = {styles.lineThree}></div>
             <h1 
             className = {styles.performHeader}
             >PERFORMANCES BY</h1>
