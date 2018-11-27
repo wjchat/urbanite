@@ -78,7 +78,7 @@ class IndexPage extends React.Component{
                    <orange>dance showcase</orange>
                     <br/>in the midwest.</h2>
             <div className = {styles.lineOne}></div>
-            <p className = {styles.textOne}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptas reprehenderit ullam illum excepturi sapiente quia maxime odio vel, nam sequi aliquid, ad deleniti, quisquam non saepe rem consequuntur enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis pariatur deserunt possimus, blanditiis? Ipsam, alias dolore repudiandae necessitatibus cum omnis ipsa dolorum, tempore minima asperiores iusto. Quas neque, quae.</p>
+            <p className = {styles.textOne}>Urbanite is the meeting ground for the best dance crews in the midwest. It is a platform for dancers who are at the cutting edge of their craft and home to one of the liveliest parties you could hope to find. Expect to see some of the most incredible performances you have ever seen both on and off the stage with a DJ to keep everybody moving after the show. On top of all that, Urbanite offers drink specials to make sure you have everything you need to have the night of your life. Grab a friend, grab a drink, and enjoy some performances that you will never forget.</p>
             <div className = {styles.lineTwo}>
                 <h2>Don't miss the <br/>
                 show of a lifetime.</h2>

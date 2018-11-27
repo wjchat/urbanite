@@ -19,13 +19,16 @@ class PreEnter extends React.Component{
     render(){
         return(
             <div className = {styles.preenter}>
-               <DanceIntro />
+              <h1 className = {styles.title}>FOR DANCERS EYES ONLY</h1>
                <div className = {styles.inputContainer}>
                 <input placeholder = 'ENTER PASSWORD' ref = 'password' type="text"/>
                 <br/>
                 <div className = {styles.submit} onClick = {this.handleClick} type = 'default'>SUBMIT</div>
                 {this.props.pw && <ErrorMSG />}
                 </div>
+              <div className = {styles.coverimg}>  
+                   <DanceIntro />
+              </div>
             </div>
         )
     }
@@ -41,7 +44,7 @@ class DancePortal extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            entered: false,
+            entered: true,
             wrongPW: false,
         }
     }

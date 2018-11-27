@@ -1,27 +1,49 @@
 @import 'global'
 .entercontainer
-    overflow: hidden
     position: absolute
-    width: 100%
     left: 0%
     height: calc(100% - 80px)
+    width: 100%
 .preenter
     width: 100%
+    height: 100%
     position: relative
     font-family: $helveticaBody
-    & > div
-        position: absolute
-        top: 30%
-        width: 100%
-        display: block
-        margin: auto
+.title
+    position: relative
+    z-index: 3
+    color: $orange
+    display: inline-block
+    top: 5%
+    left: $margin
+.inputContainer
+    display: block
+    margin: auto
+    position: absolute
+    width: 100%
+    bottom: 40%
+    text-align: center
+    box-sizing: border-box
+    z-index: 2
+    & > input
         text-align: center
-        box-sizing: border-box
-        & > input
-            text-align: center
-            background-color: rgba(0,0,0,.8)
-            border: solid $orange 1px
-            color: $orange
+        background-color: rgba(0,0,0,.8)
+        border: solid $orange 1px
+        color: $orange
+.coverimg
+    position: absolute
+    height: 100%
+    width: 100%
+    bottom: 0
+    & div
+        position: absolute
+        height: 100%
+        width: 100%
+    & img
+        position: absolute !important
+        object-fit: cover !important
+        object-position: 50% 100% !important
+        
 .submit
     cursor: pointer
     color: $orange
@@ -113,6 +135,17 @@
         color: $orange
         margin: 0
 @media (max-width: $mobileWidth)
+    .entercontainer
+        height: 100%
+        width: 100%
+        overflow: hidden
+    .title
+        top: 15%
+        display: block
+        left: 0
+        text-align: center
+    .inputContainer
+        transform: scale(1.5)
     .fullpage
         padding-top: 20%
     .pic1
@@ -131,15 +164,18 @@
         z-index: -1
         filter: brightness(50%)
         margin-top: -70%
-    .preenter
-        & > div
-            top: 150% 
-    .inputContainer
-        transform: scale(1.5)
     .places > li> div > p
-        width: 200%
-        padding-top: 100px
+        width: 100%
         padding-bottom: 70px
+.places
+    & > li
+        & > div
+            display: block
+            position: relative
+            top: 10px
+            justify-content: space-between
+.extrasHeader
+    padding-top: 20%
     
             
     

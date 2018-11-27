@@ -68,8 +68,6 @@ const Times = () => (
                  time = '10:00 pm'                 
                   />
             </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor similique, asperiores minima facilis vitae hic nobis perferendis eum doloremque molestiae incidunt, repudiandae omnis, ullam veritatis cum culpa ipsa voluptate
-            </p>
                 
         </div>
     </div>
@@ -84,15 +82,15 @@ export default class DancePage extends React.Component{
                 className = {styles.pic1}
                 image = <Pic1 /> 
                 />
-                <p className = {styles.plaintext}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae soluta ullam ut, praesentium earum odit quasi rerum eveniet nulla voluptas, iure, delectus assumenda accusamus voluptate vero eum asperiores velit possimus.</p>
-                <p>Send registration information to Doug@Doug.com</p>
+                <p className = {styles.plaintext}>This page has all the info dancers need for a successful weekend. On this page you can find information regarding the hotel/venue, parking, and scheduling. There are also details regarding the dancer pre-party and the drink specials for the weekend.</p>
+                <h2>Send registration information <br/> to <orange>Doug@Doug.com</orange></h2>
                 <h2 className = {styles.placeHeader}>Places</h2>
                 <div className = {styles2.lineOne}></div>
                 <PlaceList />
                 <h2>Times</h2>
                 <div className = {styles2.lineOne}></div>
                 <Times />
-                <h2>Extras</h2>
+                <h2 className = {styles.extrasHeader}>Extras</h2>
             <div className = {styles2.lineOne}></div>
             <br/>
             <Parallax 
